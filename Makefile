@@ -1,6 +1,5 @@
 BINARY := calm
 PREFIX ?= $(HOME)/.local
-DEPLOY_DIR ?= $(HOME)/doc/bin
 
 .PHONY: build
 build:
@@ -22,11 +21,6 @@ install: build
 .PHONY: uninstall
 uninstall:
 	rm -f $(PREFIX)/bin/$(BINARY)
-
-.PHONY: deploy
-deploy: build
-	install -d $(DEPLOY_DIR)
-	install -m 0755 $(BINARY) $(DEPLOY_DIR)/$(BINARY)
 
 .PHONY: clean
 clean:
