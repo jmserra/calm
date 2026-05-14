@@ -1,5 +1,5 @@
 BINARY := calm
-PREFIX ?= $(HOME)/.local
+BINDIR ?= $(HOME)/doc/bin
 
 .PHONY: build
 build:
@@ -15,12 +15,12 @@ vet:
 
 .PHONY: install
 install: build
-	install -d $(PREFIX)/bin
-	install -m 0755 $(BINARY) $(PREFIX)/bin/$(BINARY)
+	install -d $(BINDIR)
+	install -m 0755 $(BINARY) $(BINDIR)/$(BINARY)
 
 .PHONY: uninstall
 uninstall:
-	rm -f $(PREFIX)/bin/$(BINARY)
+	rm -f $(BINDIR)/$(BINARY)
 
 .PHONY: clean
 clean:
