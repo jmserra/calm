@@ -22,7 +22,7 @@ type mode struct {
 }
 
 // modes is ordered so help output and iteration stay stable.
-var modeNames = []string{"coherent", "box", "478", "exhale", "deep"}
+var modeNames = []string{"coherent", "box", "478", "exhale"}
 
 var modes = map[string]mode{
 	"coherent": {5.5, 0.0, 5.5, 0.0,
@@ -33,8 +33,6 @@ var modes = map[string]mode{
 		"Dr. Weil's sedative pattern. Good for falling asleep or coming down from anxiety."},
 	"exhale": {4.0, 0.0, 6.0, 0.0,
 		"Longer out than in. A gentle parasympathetic nudge, no holds to think about."},
-	"deep": {6.0, 2.0, 8.0, 2.0,
-		"Slower cycle with light holds. For when you want to really settle."},
 }
 
 const defaultMode = "coherent"
