@@ -3,6 +3,8 @@
 A tiny terminal breathing companion. A single soft circle expands and contracts
 in your terminal — inhale as it grows, exhale as it shrinks. Stare and breathe.
 
+![calm in coherent mode: a circle of dots slowly grows and shrinks](docs/demo.gif)
+
 No config, no dependencies, no network. Just one Go file.
 
 ## Install
