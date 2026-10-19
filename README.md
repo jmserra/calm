@@ -8,7 +8,13 @@ No config, no dependencies, no network. Just one Go file.
 ## Install
 
 ```sh
-make install        # builds and copies to ~/doc/bin (override with BINDIR=...)
+go install github.com/jmserra/calm@latest
+```
+
+Or from a checkout:
+
+```sh
+make install        # builds and copies to ~/.local/bin (override with BINDIR=...)
 ```
 
 Or build it yourself:
@@ -19,7 +25,7 @@ go build .          # equivalent
 ```
 
 Requires Go 1.24+. Works on any terminal that understands 256-color ANSI
-escapes (so Linux and macOS; not native Windows console).
+escapes, on Linux or macOS. It does not build on Windows.
 
 ## Usage
 
@@ -179,7 +185,11 @@ HPA-axis (cortisol) activity.
 |-------------|------|
 | `build`     | build `./calm` (stripped binary) |
 | `run`       | build and run |
-| `install`   | build and install to `$BINDIR` (default `~/doc/bin`) |
+| `install`   | build and install to `$BINDIR` (default `~/.local/bin`) |
 | `uninstall` | remove the installed binary |
 | `vet`       | `go vet ./...` |
 | `clean`     | remove `./calm` |
+
+## License
+
+MIT — see [LICENSE](LICENSE).

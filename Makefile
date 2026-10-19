@@ -1,5 +1,5 @@
 BINARY := calm
-BINDIR ?= $(HOME)/doc/bin
+BINDIR ?= $(HOME)/.local/bin
 
 .PHONY: build
 build:

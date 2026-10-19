@@ -1,3 +1,5 @@
+//go:build !windows
+
 // calm — a tiny terminal breathing companion. Stare and breathe.
 package main
 
